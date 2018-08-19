@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!--<hibernate-mapping package="包名">-->
+
+    <!--<class name="类名" table="表名">-->
+
+        <!--<id name="主键在java类中的字段名" column="对应表中字段" type="类型 ">-->
+
+            <!--<generator class="主键生成策略"/>-->
+
+        <!--</id>-->
+
+        <!--……-->
+
+    <!--</class>-->
+
+<!--</hibernate-mapping>-->
+
+<hibernate-mapping>
+    <class name="com.wangyi.domain.Board" table="t_board">
+        <!--主键映射-->
+        <id name="boardId" column="board_id">
+            <generator class="identity"/>
+        </id>
+        <property name="boardName" column="board_name" />
+        <property name="boardDesc" column="board_desc" />
+        <property name="topicNum" column="topic_num" />
+    </class>
+</hibernate-mapping>
